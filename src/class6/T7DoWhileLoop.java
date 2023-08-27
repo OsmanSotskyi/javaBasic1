@@ -1,0 +1,18 @@
+package class6;
+
+public class T7DoWhileLoop {
+    public static void main(String[] args) {
+
+        for (int i=100; i>=1; i--){
+            System.out.print(i+" ");
+        }
+
+        /*
+        for (int i=0; i<=10;i++){
+            System.out.print(i+" ");
+        }*/
+
+
+    }
+    }
+

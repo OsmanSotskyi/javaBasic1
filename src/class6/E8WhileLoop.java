@@ -1,0 +1,20 @@
+package class6;
+
+public class E8WhileLoop {
+    public static void main(String[] args) {
+        boolean cond=true;
+        int i=1;
+
+
+        while (i<=10){
+            if (i !=7){
+
+            System.out.println(i);
+
+        }
+            i+=1;
+        }
+
+
+    }
+}
