@@ -4,28 +4,29 @@ import java.util.Scanner;
 
 public class hw1 {
     public static void main(String[] args) {
-        Scanner scanner=new Scanner(System.in);
-        System.out.println("Enter mom's name");
+        Scanner scanner = new Scanner(System.in);
 
-        String momname=scanner.nextLine();
+        System.out.println("Dad's name");
+        String dadname = scanner.nextLine();
 
-        System.out.println("Enter dad's name");
+        System.out.println("mom's name");
+        String momname = scanner.nextLine();
 
-        String dadname=scanner.nextLine();
+        System.out.println("boy or girl");
+        String gender = scanner.nextLine();
 
-        System.out.println("Girl or Boy?");
-        String kidname=scanner.nextLine();
+        int dadnamehalf = dadname.length() / 2;
+        int momnamehalf = momname.length() / 2;
 
-        String newbabyname="";
 
-        if (kidname.equalsIgnoreCase("boy")){
-            newbabyname=dadname.substring(0,dadname.length()/2)+momname.substring(momname.length()/2);
-
-        } else if (kidname.equalsIgnoreCase("girl")) {
-            newbabyname=momname.substring(0,momname.length()/2)+dadname.substring(dadname.length()/2);
-
+        if (gender.equals("boy")) {
+            String name = dadname.substring(0, dadnamehalf) + momname.substring(momnamehalf);
+            System.out.println(name);
+        } else if (gender.equals("girl")) {
+            String name = momname.substring(0, momnamehalf) + dadname.substring(dadnamehalf);
+            System.out.println(name);
         }
-        System.out.println(newbabyname);
+
 
 
 
