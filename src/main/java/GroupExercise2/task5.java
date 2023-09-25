@@ -1,25 +1,20 @@
 package GroupExercise2;
 
-public class task5 {
-    public static boolean isAnagram(String word, String anagram) {
-        boolean isAnagram = false;
-        if (word != null && anagram != null && word.length() == anagram.length()) {
-            char[] arr = word.toCharArray();
-            StringBuilder temp = new StringBuilder(anagram);
-            int wordLength = word.length();
-            for (char ch : arr) {
-                int index = temp.indexOf("" + ch);
-                if (index != -1) {
-                    temp.deleteCharAt(index);
-                }
-            }
-            isAnagram = temp.toString().isEmpty();
-        }
-        return isAnagram;
-    }
+import java.util.Arrays;
 
+public class task5 {
     public static void main(String[] args) {
 
-        System.out.println(isAnagram("listen","silent"));
+            String s1 = "silent";
+            String s2 = "listen";
+
+            char [] c1= s1.toLowerCase().toCharArray();
+            char [] c2= s2.toLowerCase().toCharArray();
+            Arrays.sort(c1);
+            Arrays.sort(c2);
+            boolean isAnaGram = Arrays.equals(c1,c2);
+            System.out.println(isAnaGram);
+
+
     }
 }
